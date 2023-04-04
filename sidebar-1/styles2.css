@@ -1,0 +1,117 @@
+/* Estilos generales */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos del encabezado */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu-btn {
+  display: block;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+/* Estilos del menú lateral */
+
+aside {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #2c3e50;
+  z-index: 1;
+  overflow-y: auto;
+  color: #fff;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+main {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+aside.active {
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del pie de página */
+
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Estilos para pantallas grandes */
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  /* Estilos del menú lateral */
+  aside {
+    left: 0;
+  }
+
+  /* Estilos del encabezado */
+  header {
+    margin-left: 250px;
+  }
+
+  /* Estilos del contenido principal */
+  main {
+    margin-left: 250px;
+  }
+}

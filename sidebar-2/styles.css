@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos para la barra de desplazamiento */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+/* Estilos para el fondo del scroll */
+*::-webkit-scrollbar-track {
+  background-color: rgba(242, 242, 242, 0.502);
+}
+
+/* Estilos para la barra */
+*::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 4px;
+}
+
+/* Estilos para la barra cuando se está desplazando y paso por encima */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #999999;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  background: #cfcfcf;
+}
+
+.sidebar {
+  position: absolute;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 100%;
+  background: #006699;
+  transition: width 0.4s;
+}
+
+body.open .sidebar {
+  width: 260px;
+}
+
+.sidebar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 0 1.25rem 0 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-burger {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  background: url(./assets/icon-burger.svg) no-repeat center center;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+body.open .sidebar-burger {
+  background: url(./assets/icon-close.svg) no-repeat no-repeat center center;
+}
+
+.sidebar-logo {
+  height: 70px;
+}
+
+.sidebar-menu > li {
+  height: 60px;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 0 25px;
+}
+
+.sidebar-menu > li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-menu > li.has-border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu > li > a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar-menu > li > a > img {
+  margin-right: 25px;
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-menu > li > a > span {
+  color: #f9f9f9;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="open">
+    <header class="sidebar">
+      <nav class="sidebar-inner">
+        <div class="sidebar-header">
+          <button type="button" class="sidebar-burger" onclick="toggleSidebar()"></button>
+          <img src="./assets/logo.png" class="sidebar-logo" alt="Logo de mi aplicación" />
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="">
+              <img src="./assets/icon-home.svg" alt="icono de inicio para el menú" />
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li class="has-border">
+            <a href="">
+              <img src="./assets/icon-settings.svg" alt="icono de configuraciones para el menú" />
+              <span>Configuraciones</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./assets/icon-accounts.svg" alt="icono de docentes para el menú" />
+              <span>Docentes</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./assets/icon-blockchain.svg" alt="icono de grupos para el menú" />
+              <span>Grupos</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./assets/icon-folders.svg" alt="icono de temarios para el menú" />
+              <span>Temario</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./assets/icon-lock.svg" alt="icono de seguridad para el menú" />
+              <span>Seguridad</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <script type="text/javascript">
+      const toggleSidebar = () => document.body.classList.toggle('open');
+    </script>
+  </body>
+</html>
